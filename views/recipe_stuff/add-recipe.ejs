@@ -1,0 +1,60 @@
+<%- include('../includes/boilerplate.ejs') %>
+<%- include('../includes/navbar.ejs') %>
+<link rel="stylesheet" href="/css_files/forms.css">
+
+<br><br><br>
+
+<main class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="bg-custom-blue p-4 rounded">
+                <form class="recipe-form" action="<%if(editing){%>/edit-recipe<% } else {  %>/add-recipe<% } %>" method="POST">
+                    <div class="mb-3">
+                        <label for="title" class="form-label custom-label">Title</label>
+                        <input type="text" name="title" id="title" class="form-control" value="<%if(editing) {%><%= recipe.title %> <% } %>">
+                    </div>
+
+                    <div class="mb-3 text-center">
+                        <a href="https://imgur.com/upload" class="black-link" target="_blank" style="color: rgb(25, 105, 85); font-weight: bold;">Uploading your own image?</a>
+                    </div>
+                                       
+                    <div class="mb-3">
+                        <label for="imageUrl" class="form-label custom-label">Image URL ( If you are Uploading , make sure to add '.jpeg' at the end of link )</label>
+                        <input type="text" name="imageUrl" id="imageUrl" class="form-control" value="<%if(editing) {%><%= recipe.imageUrl%><% } %>">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="price" class="form-label custom-label">Time Required (in hours) :</label>
+                        <input type="text" name="time" id="time" class="form-control" step="0.01" value="<%if(editing) {%> <%= recipe.time_req%> <% } %>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label custom-label">Ingredients required (comma separated):</label>
+                        <textarea name="ingredients" id="ingredients" class="form-control" rows="4"><%if(editing) {%><%= recipe.ingredients %><% } %></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipe" class="form-label custom-label">Recipe:</label>
+                        <textarea name="recipe" id="recipe" class="form-control" rows="5"><%if(editing) {%><%= recipe.recipe %><% } %></textarea>
+                    </div>
+
+                    <br>
+                    <div class="mb-3">
+                        <label for="visibility" class="form-label custom-label">Recipe Visibility:</label>
+                        <select name="visibility" id="visibility" class="form-select">
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                    
+                <br>
+                <input type="hidden" name="recipeid" value="<%=recipeId%>">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button class="btn btn-primary" type="submit"><% if (editing) { %>Update Recipe<% } else { %>Add Recipe<% } %></button>
+                
+                <br>
+                <% if (editing) { %>
+                    <input type="hidden" name="recipeId" value="<%= recipe.id %>">
+                <% } %>
+            </form>
+        </div> <br>
+    </div> <br><br>
+</main>

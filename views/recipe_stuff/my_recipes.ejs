@@ -1,0 +1,82 @@
+<%- include('../includes/boilerplate.ejs') %>
+<%- include('../includes/navbar.ejs') %>
+<br><br><br>
+
+<% if(recipe_arr.length == 0){ %>
+  <h2 style="text-align: center;">No recipes present !</h2>
+<% } %>
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 10vh;">
+    <form action="/add-recipe" method="get">
+      <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+      <button type="submit" class="btn btn-primary btn-lg mybutton1">Add a recipe!</button>
+    </form>
+</div>
+
+<div class="container">
+  <% for(let i = 0; i < recipe_arr.length; i+=2){ %>
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card mx-3 my-3" style="width: 22rem; height: 13rem; background-image: url('<%= recipe_arr[i].imageUrl %>'); background-repeat: no-repeat; background-size: cover; background-position: center; box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.9); border-radius: 14px;">
+          <div class="card-body my-filter" style=" background-size: cover; border-radius: 14px;">
+            <a href="/details/<%= recipe_arr[i].id %>">
+              <h5 class="card-title text-white"><%= recipe_arr[i].title %></h5>
+            </a>
+            <p class="card-text text-white"> ⏱️ <%= recipe_arr[i].time_req %> hours</p>
+            <p class="card-text text-white"><%= recipe_arr[i].visibility %></p>
+
+            <div class="card__actions d-flex justify-content-end">
+              <form action="/edit-recipe/<%= recipe_arr[i].id %>" method="GET">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button type="submit" class="btn btn-sm btn-outline-light me-2 mr-2">Edit</button>
+              </form>
+                <form action="/delete-recipe" method="POST">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <input type="hidden" name="recipeId" value="<%= recipe_arr[i].id %>">
+                  <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 2nd col -->
+      <% if(i + 1 < recipe_arr.length) { %>
+      <div class="col-md-5">
+        <div class="card mx-3 my-3" style="width: 22rem; height: 13rem; background-image: url('<%= recipe_arr[i+1].imageUrl %>'); background-repeat: no-repeat; background-size: cover; background-position: center; box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.9); border-radius: 14px;">
+          <div class="card-body my-filter" style=" background-size: cover; border-radius: 14px;">
+            <a href="/details/<%= recipe_arr[i+1].id %>">
+              <h5 class="card-title text-white"><%= recipe_arr[i+1].title %></h5>
+            </a>
+            <p class="card-text text-white"> ⏱️ <%= recipe_arr[i+1].time_req %> hours</p>
+            <p class="card-text text-white"><%= recipe_arr[i+1].visibility %></p>
+
+            <div class="card__actions d-flex justify-content-end">
+              <form action="/edit-recipe/<%= recipe_arr[i+1].id %>" method="GET">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button type="submit" class="btn btn-sm btn-outline-light me-2 mr-2">Edit</button>
+              </form>
+                <form action="/delete-recipe" method="POST">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <input type="hidden" name="recipeId" value="<%= recipe_arr[i+1].id %>">
+                  <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  <% } %>
+</div>
+
+
+<style>
+  /* Adjust card margin for small screens */
+  @media (min-width: 1200px) {
+    .mybutton1{
+      margin-right: 60px;
+    }
+  }
+</style>

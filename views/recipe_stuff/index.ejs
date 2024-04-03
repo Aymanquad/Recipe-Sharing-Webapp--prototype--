@@ -1,0 +1,151 @@
+<%- include('../includes/boilerplate.ejs') %>
+<%- include('../includes/navbar.ejs') %>
+
+
+<!-- 1st Section -->
+  <section class="section1">
+    <div class="container My-container">
+      <h1>Recipe Sharing WebApp</h1>
+      <p>Welcome to our community of food lovers!</p>
+    </div>
+  </section>
+
+  <br><br>
+
+  <!-- 2rd Section -->
+  <section class="section3">
+    <div class="container">
+        <h2>Famous Chefs</h2>
+        <br><br>
+      <div class="row">
+        <!-- 6 divs for storing recipes -->
+        <div class="col-md-4 mb-5">
+          <div class="my-images my-image1">
+              <div class="recipe">
+                  <h5><a href="https://www.gordonramsay.com/" target="_blank">Gordon Ramsay</a></h5>
+              </div>
+          </div>
+      </div>
+      
+        <div class="col-md-4 mb-5">
+            <div class="my-images my-image2">
+                <div class="recipe">
+                    <h5><a href="https://www.ducasse-paris.com/en/alain-ducasse" target="_blank">Alain Ducasse</a></h5>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="my-images my-image3">
+                <div class="recipe">
+                    <h5><a href="https://www.jamieoliver.com/" target="_blank">Jamie oliver</a></h5>
+                  </div>
+            </div>
+        </div>
+        <div class="w-100"></div> <!-- Add a clearfix for smaller screens -->
+        <div class="col-md-4 mb-5">
+            <div class="my-images my-image4">
+                <div class="recipe">
+                    <h5><a href="https://www.sanjeevkapoor.com/" target="_blank">Sanjeev-Kapoor</a></h5>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="my-images my-image5">
+                <div class="recipe">
+                    <h4><a href="https://www.splendidtable.org/bio/vikas-khanna" target="_blank">Vikas Khanna</a></h4>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="my-images my-image6">
+                <div class="recipe">
+                    <h4><a href="https://www.marcopierrewhite.co/" target="_blank">Marco Pierre</a></h4>
+                  </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+ <!-- 3nd Section -->
+ <section class="section2">
+    <div class="container my-img-expand">
+        <div class="row">
+            <div class="col-md-8">
+              <!-- Nothing in the first column -->
+            </div>
+            <div class="corner-div">
+                <h4>Something New ?</h4>
+                <p>Want to try out a new recipe ??</p>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <!-- 4th Section -->
+  <section class="section4">
+    <div class="container">
+      <h2>Famous Recipes</h2>
+      <!-- Carousel of food items -->
+      <div id="recipeCarousel" class="carousel slide" data-ride="carousel" data-interval="4500">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Food 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Food 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1564589944854-08b59bed61f1?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Food 3">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Food 4">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Food 5">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Food 6">
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5th Section -->
+  <section class="section5">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>This is Md. Ayman Quadri , a Talented-foolish backend developr who has no <br> 
+        interest in making food but ... eating it ofc .</p>
+    </div>
+  </section>
+  
+<form action="">
+  <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+</form>
+  <!-- 6th Section (Footer) -->
+  <%- include('../includes/footer.ejs') %>
+
+
+  <script>
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+  </script>
+
+</body>
+</html>

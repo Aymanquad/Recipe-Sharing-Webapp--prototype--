@@ -1,0 +1,30 @@
+<%- include('../includes/boilerplate.ejs') %>
+<%- include('../includes/navbar.ejs') %>
+<link rel="stylesheet" href="/css_files/auth.css">
+
+<br><br><br>
+
+<main class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="bg-custom-blue p-4 rounded">
+            <div class="center-div">
+                <% if(errorMsg){ %>
+                    <div class="user-message user-message--error">
+                        <%= errorMsg %>
+                    </div>
+                <% } %>
+
+                <form action="/reset" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label custom-label">E-Mail</label>
+                        <input type="email" name="email" id="email" class="form-control custom-input">
+                    </div>
+                    <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+                    <button class="btn btn-primary" type="submit">Reset password</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</main>

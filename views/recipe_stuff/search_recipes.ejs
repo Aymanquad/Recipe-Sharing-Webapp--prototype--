@@ -1,0 +1,70 @@
+<%- include('../includes/boilerplate.ejs') %>
+<%- include('../includes/navbar.ejs') %>
+
+<br><br><br><br>
+
+<div class="text-center">
+    <h2>Global recipe search </h2>
+</div>
+
+<div class="container mt-5">
+    <form action="/search" method="POST">
+        <div class="input-group mb-3">
+            <input type="text" id="query" name="query" class="form-control" placeholder="Search for a recipe" aria-label="Search for a recipe" aria-describedby="button-search">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="button-search">Search</button>
+            </div>
+        </div>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
+    <div class="mt-5">
+        <% //console.log(results[0].recipe); %>
+        <% if (results.length > 0) { %>
+            <h3>Search Results for "<%= query %>":</h3>
+            <div class="row mt-3">
+                <% results.forEach(result => { %>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-grey shadow-sm"> <!-- Added border and shadow -->
+                            <img src="<%= result.recipe.image %>" class="card-img-top" alt="<%= result.recipe.label %>">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= result.recipe.label %></h5>
+                                <p class="card-text">Source: <%= result.recipe.source %></p>
+                                <a href="<%= result.recipe.url %>" class="btn btn-primary" target="_blank">View Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<% if (results.length == 0) { %>
+    <div class="text-center"> <!-- Center the message -->
+        <h3>No recipes found for the search. Sorry.</h3>
+    </div>
+    <br><br><br><br>
+<% } %>
+
+<br><br><br><br><br><br><br><br>
+
+<%- include('../includes/footer.ejs') %>
+
+<style>
+    .border-grey {
+        border: 1px solid #ccc; /* Grey border */
+    }
+    .shadow-sm {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* White box shadow */
+    }
+    .input-group {
+        max-width: 500px; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the search bar */
+    }
+    .form-control {
+        border-radius: 20px; /* Rounded corners */
+    }
+    .btn-primary {
+        border-radius: 20px; /* Rounded corners */
+    }
+</style>

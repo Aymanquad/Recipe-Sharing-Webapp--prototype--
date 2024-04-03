@@ -1,0 +1,184 @@
+body {
+    background-color: #E6E6FA; 
+}
+
+section{
+    padding-top: 100px  !important;   
+    padding-bottom: 100px   !important;
+}
+
+/* Styles for fixed div in section 2 */
+.fixed-div {
+    position: sticky;
+    top: 0;
+  }
+
+.My-container{
+    padding-top: 110px;
+}
+/* Styles for recipe divs in section 3 */
+.recipe {
+border: 1px solid #ccc;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+/* Style for section 1 background image */
+.section1 {
+background-image: url('https://images.unsplash.com/photo-1497888329096-51c27beff665?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+background-size: cover;
+color: rgba(0, 0, 0, 0.967);
+padding: 100px 0;
+min-height: 96vh ;
+}
+
+/* Style for section 5 */
+.section5 {
+background-color: #f8f9fa;
+padding: 50px 0;
+}
+
+/* Style for footer */
+.footer {
+background-color: #343a40;
+color: white;
+text-align: center;
+padding: 20px 0;
+
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
+.my-img-expand{
+    max-width: 100% !important;
+    height: 240px;
+    background: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')  !important;
+}
+
+
+.my-images {
+    border: 3px;
+    border-radius: 17px;
+    z-index: 1; 
+}
+
+.my-images a{
+    color: white !important;
+}
+
+/* images for divs */
+.my-image1{
+    background: url('https://columbiabusinessreport.com/wp-content/uploads/sites/3/2023/10/Gordon-Ramsayonline.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.my-image2{
+    background: url('https://annotatedgilmoregirls.files.wordpress.com/2022/01/alain-ducasse.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.my-image3{
+    background: url('https://www.restaurantonline.co.uk/var/wrbm_gb_hospitality/storage/images/_aliases/wrbm_large/publications/hospitality/restaurantonline.co.uk/article/2023/11/21/jamie-oliver-on-the-opening-of-his-new-london-restaurant-his-highly-anticipated-return-to-the-uk-dining-scene/6191733-1-eng-GB/Jamie-Oliver-on-the-opening-of-his-new-London-restaurant-his-highly-anticipated-return-to-the-UK-dining-scene.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.my-image4{
+    background: url('https://static.toiimg.com/thumb/48202473.cms?resizemode=4&width=1200');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.my-image5{
+    background: url('https://asiasociety.org/sites/default/files/styles/1200w/public/2020-08/200827_vikas_khanna_AGC.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.my-image6{
+    background: url('https://www.soegjobs.com/wp-content/uploads/2017/05/Marco-Masterchef.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+
+
+.recipe {
+    background-color: rgba(85, 84, 84, 0.433) ;
+    z-index: 2;
+    /* background-color: #f8f9fa; */
+    padding: 80px; /* Inner padding for text */
+    text-align: center; /* Center align text */
+    border: 2px solid white; /* Border color */
+    border-radius: 10px; /* Border radius */
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6); /* Box shadow */
+  }
+  
+  
+
+.corner-div{
+    position: relative;
+    padding: 15px;
+    background-color: #f6e3b9;
+    top: 60px;
+    right: 10px;
+    border: 7px black;
+    border-radius: 7px;
+    box-shadow: 2px 6px 7px 3px #343a40;
+    
+}
+
+
+.my-filter{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0));
+}
+
+.my_public_box{
+   width: 98% !important;
+}
+
+.heart-button {
+    border: none;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .heart-button svg {
+    /* color: red; */
+    width: 24px;
+    height: 24px;
+  }
+  
+  .heart-button svg path {
+    transition: stroke 0.3s ease;
+  }
+  
+  .heart-button:hover svg path {
+    stroke: red; /* Change color on hover */
+  }
+  
+
+
+
+
+
+/*----------------------- navbar stuff--------------------------- */
+
+.navbar{
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    -webkit-backdrop-filter: blur(10px);
+}
+.translucent-navbar {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.31);
+    box-shadow: #212222;
+  }
+  
+  /* Optional: Style for navbar links */
+
+.my-color{  
+    color: rgb(255, 255, 255) !important; 
+}
+
