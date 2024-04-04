@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
       <% for(let j = i; j < i+3 && j < recipe_arr.length; j++) { %>
         <div class="col-lg-4 col-md-6 mb-3"> <!-- Adjusted column sizing -->
-          <div class="card mx-3 my-3" style="width: 22rem; height: 13rem; background-image: url('<%= recipe_arr[j].imageUrl %>'); background-repeat: no-repeat; background-size: cover; background-position: center; box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.9); border-radius: 14px;">
+          <div class="card mx-3 my-3" style="width: 22rem; height: 13rem; background-image: url('<%= recipe_arr[j].imageUrl %>'); background-repeat: no-repeat; background-size: cover; background-position: center; box-shadow: 0px 4px 8px rgba(35, 35, 35, 0.9); border-radius: 14px;">
             <div class="card-body my-filter" style=" background-size: cover; border-radius: 14px;">
               <a href="/details/<%= recipe_arr[j].id %>">
                 <h5 class="card-title text-white"><%= recipe_arr[j].title %></h5>
