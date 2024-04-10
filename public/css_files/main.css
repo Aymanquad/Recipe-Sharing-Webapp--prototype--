@@ -1,5 +1,26 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+
+
+body{
     background-color: #E6E6FA; 
+}
+
+p{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+h1{
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+h2{
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 section{
@@ -159,9 +180,74 @@ width: 100%;
     stroke: red; /* Change color on hover */
   }
   
+  /* styles for cards using intersecting obsv */
+  .cuisine-card {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  .cuisine-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .cuisine-card.animated {
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 
+  /* phone chef carousel */
+  @media (max-width: 608px) {
+    .vanish_div{
+      display: none;
+    }
+  }
 
+
+  @media (min-width: 608px) {
+  
+    .chef-carousel {
+      margin-bottom: 2rem;
+    }
+    
+    .chef-carousel.carousel-item {
+      height: 20rem;
+      text-align: center;
+    }
+    
+    .chef-carousel.carousel-item img {
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+    }
+    
+    .chef-carousel.carousel-control-prev,
+    .chef-carousel.carousel-control-next {
+      width: 5%;
+    }
+    
+    .chef-carousel.carousel-control-prev-icon,
+    .chef-carousel.carousel-control-next-icon {
+      width: 2rem;
+      height: 2rem;
+    }
+    
+   .chef-carousel {
+      display: none;
+    }
+  }
 
 
 /*----------------------- navbar stuff--------------------------- */
