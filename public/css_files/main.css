@@ -16,11 +16,13 @@ h1{
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 h2{
   font-family: "Charm", cursive;
   font-weight: 400;
   font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 section{
