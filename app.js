@@ -132,7 +132,7 @@ app.use(errorRoute.get404);
  
 // app.listen(3000);
 mongoose.connect(process.env.MONGO_URI)
-    .then(() => {
+    .then(() => { 
         console.log('Connected to MongoDB !'); 
         app.listen(3000);
     })
