@@ -1,10 +1,15 @@
 <%- include('../includes/boilerplate.ejs') %>
 <%- include('../includes/navbar.ejs') %>
-<br><br><br>
+<br><br><br><br>
 
 <% if(recipe_arr.length == 0){ %>
   <h2 style="text-align: center;">No recipes present !</h2>
 <% } %>
+
+<h2 class="my-pr-title">Public Recipes</h2>
+<br>
+<p class="my-pr-p">Discover and share delicious recipes from around the world with our vibrant community. </p>
+
 
 <div class="container-fluid">
   <% for(let i = 0; i < recipe_arr.length; i+=3){ %>

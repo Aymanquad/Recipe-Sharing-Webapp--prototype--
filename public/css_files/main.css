@@ -114,9 +114,19 @@ text-align: center;
 padding: 20px 0;
 
 position: relative;
+top: 15rem;
 left: 0;
 bottom: 0;
 width: 100%;
+}
+
+.my-pr-title{
+  margin-left: 30px;
+}
+
+.my-pr-p{
+  margin-left: 30px;
+  width: 70%;
 }
 
 .my-img-expand{
