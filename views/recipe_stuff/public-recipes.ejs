@@ -6,10 +6,15 @@
   <h2 style="text-align: center;">No recipes present !</h2>
 <% } %>
 
-<h2 class="my-pr-title">Public Recipes</h2>
-<br>
-<p class="my-pr-p">Discover and share delicious recipes from around the world with our vibrant community. </p>
-
+<% if(!favourites){ %>
+  <h2 class="my-pr-title">Public Recipes</h2>
+  <br>
+  <p class="my-pr-p">Discover and share delicious recipes from around the world with our vibrant community. </p>
+<% } else {%>
+  <h2 class="my-pr-title">Favourite Recipes</h2>
+  <br>
+  <p class="my-pr-p">Your top picks: Browse and enjoy your favorite recipes anytime. </p>
+<% } %>
 
 <div class="container-fluid">
   <% for(let i = 0; i < recipe_arr.length; i+=3){ %>

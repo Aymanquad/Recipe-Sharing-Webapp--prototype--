@@ -123,10 +123,18 @@ width: 100%;
 .my-pr-title{
   margin-left: 30px;
 }
-
 .my-pr-p{
   margin-left: 30px;
   width: 70%;
+}
+
+.my-r-title{
+  margin-right: 60px;
+  text-align: center;
+}
+.my-r-p{
+  margin-right: 60px;
+  text-align: center;
 }
 
 .my-img-expand{
