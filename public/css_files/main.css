@@ -153,6 +153,22 @@ width: 100%;
   animation: fadeInUp 1s ease-out forwards;
 }
 
+.reveal-hr {
+  border: none;
+  height: 4px; /* Thickness of the line */
+  background-color: #ff6347; /* A nice color like Tomato */
+  width: 0; /* Start with 0 width */
+  max-width: 60%; /* Maximum width of the line */
+  animation: revealLine 1s 1s ease-out forwards; /* Starts after text animations */
+  margin: 20px auto; /* Center the line with some margin */
+}
+
+@keyframes revealLine {
+  to {
+      width: 60%; /* End width is set to 60% */
+  }
+}
+
 @keyframes fadeInUp {
   to {
       opacity: 1;
