@@ -156,11 +156,12 @@ width: 100%;
 .reveal-hr {
   border: none;
   height: 4px; /* Thickness of the line */
-  background-color: #ff6347; /* A nice color like Tomato */
+  background-color: #252424; /* A nice color like Tomato */
   width: 0; /* Start with 0 width */
   max-width: 60%; /* Maximum width of the line */
   animation: revealLine 1s 1s ease-out forwards; /* Starts after text animations */
-  margin: 20px auto; /* Center the line with some margin */
+  margin-left: 20px ; 
+  border-radius: 25px;
 }
 
 @keyframes revealLine {
@@ -358,6 +359,12 @@ width: 100%;
    .chef-carousel {
       display: none;
     }
+
+    .reveal-hr {
+      border: none;
+      margin: 20px auto ; 
+    }
+    
   }
  
 
