@@ -367,7 +367,7 @@ width: 100%;
   }
 
 
-  @media (min-width: 608px) {
+  @media (max-width: 608px) {
     .reveal-hr {
       border: none;
       margin: 20px auto ; 
