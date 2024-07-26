@@ -177,11 +177,50 @@ width: 100%;
   }
 }
 
+
+.mybutton1 {
+  background-color: #007bff; /* Primary blue color */
+  color: #fff; /* White text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mybutton1:hover {
+  background-color: #0056b3; /* Darker blue */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.mybutton1:active {
+  background-color: #004494; /* Even darker blue */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+/* Danger button */
+.btn-danger {
+  background-color: #dc3545; /* Danger red color */
+  color: #fff; /* White text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-danger:active {
+  background-color: #ab1e2c; /* Even darker red */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+
 .card {
   transition: transform 0.3s ease;
 }
 .card:hover {
-  transform: scale(1.04);
+  transform: scale(1.048);
   box-shadow: 2px 4px 8px 2px rgba(35, 35, 35, 0.9);
 }
 
@@ -329,6 +368,14 @@ width: 100%;
 
 
   @media (min-width: 608px) {
+    .reveal-hr {
+      border: none;
+      margin: 20px auto ; 
+    }
+}
+
+
+  @media (min-width: 608px) {
   
     .chef-carousel {
       margin-bottom: 2rem;
@@ -358,11 +405,6 @@ width: 100%;
     
    .chef-carousel {
       display: none;
-    }
-
-    .reveal-hr {
-      border: none;
-      margin: 20px auto ; 
     }
     
   }
