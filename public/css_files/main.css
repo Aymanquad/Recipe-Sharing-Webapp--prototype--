@@ -136,6 +136,13 @@ width: 100%;
   margin-right: 60px;
   text-align: center;
 }
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 2px 4px 8px 2px rgba(35, 35, 35, 0.9)
+}
 
 .my-img-expand{
     max-width: 100% !important;
